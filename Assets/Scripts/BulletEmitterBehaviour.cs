@@ -13,6 +13,7 @@ public class BulletEmitterBehaviour : MonoBehaviour {
 	void Start () {
 		
 	}
+    //Creates a bullet and adds a force to it
 	public void Shoot()
     {
         currentBullet = Instantiate(bullet.gameObject, transform.position, transform.rotation);

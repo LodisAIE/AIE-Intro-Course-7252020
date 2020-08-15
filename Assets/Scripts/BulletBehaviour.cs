@@ -11,11 +11,13 @@ public class BulletBehaviour : MonoBehaviour {
         GameObject temp = gameObject;
         Destroy(temp, despawnTime);
     }
+    //destroys temporary reference instead of prefab instance
     private void Destroy()
     {
         GameObject temp = gameObject;
         Destroy(temp);
     }
+    //Checks to see what the bullet ran into. If it is not the owner and has a health script attached to it, then it damages it
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag(owner) == false)
