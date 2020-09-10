@@ -39,5 +39,6 @@ public class EnemyMovementBehaviour : MonoBehaviour {
         }
         //add velocity to position
         transform.position += velocity * Time.deltaTime;
+        transform.LookAt(playerTransform);
 	}
 }
